@@ -19,7 +19,7 @@ RUN sed -i 's_#include <stropts.h>_//#include <stropts.h>_g' /root/pintos/src/ut
 RUN sed -i '288s_^_//_g' /root/pintos/src/utils/squish-pty.c && sed -i '289s_^_//_g' /root/pintos/src/utils/squish-pty.c && sed -i '290s_^_//_g' /root/pintos/src/utils/squish-pty.c && sed -i '291s_^_//_g' /root/pintos/src/utils/squish-pty.c && sed -i '292s_^_//_g' /root/pintos/src/utils/squish-pty.c && sed -i '293s_^_//_g' /root/pintos/src/utils/squish-pty.c
 
 #building utils
-RUN cd /root/pintos/src/utils && ls -l && pwd && make
+RUN cd /root/pintos/src/utils && pwd && make
 
 #setting it to use qemu instrad of bochs
 RUN sed -i 's_--bochs_--qemu_g' /root/pintos/src/threads/Make.vars
